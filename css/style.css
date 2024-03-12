@@ -1,0 +1,13 @@
+header div h1{font-size: 45px}
+img {border-radius: 5px;
+    max-width: 400px;
+}
+.homework {color:rgb(188, 187, 189)}
+.prepre {
+    max-width: 700px;
+    padding: 5px;
+    margin-left: 15%;
+    border-radius: 5px; 
+}
+
+.prepre span {white-space: pre-wrap}

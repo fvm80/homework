@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Git</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="text-light bg-dark">
+        <div class="container">
+            <h1 class="d-flex text-light text-center align-items-center justify-content-center">Домашнее задание к уроку "Контроль версий Git"</h1>
+                <div class="container text-secondary">
+                    <h3>Необзодимо выполнить следующее:</h3>
+                    <ul style="list-style-type: circle">
+                        <li>Создать новый проект и подключить в него Git через терминал.</li>
+                        <li>Указать, что в вашем проекте будут игнорироваться все файлы с расширением .sass и папки: bin, admin, config.</li>
+                        <li>Добавить все файлы в локальное хранилище;</li>
+                        <li>Создать новую ветку и перейти в неё;</li>
+                        <li>В новой ветке создайть папку blog с файлами: index.js, index.html;</li>
+                        <li>Загрузить на удаленный репозиторий лишь основную ветку проекта.</li>
+                    </ul>
+                    <p class="pb-4"><i>Для отправки на проверку, необходимо создать файл, в котором будут прописанны все команды что необходимо было бы сделать для выполнения действий задания.</i></p>
+                </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1 class="d-flex text-center align-items-center justify-content-center">Выполнение задания</h1>   
+        
+        <p class="container text-primary mt-4">1. Создаем новый проект, например <b>"homework"</b> и подключаем в нем Git через терминал.</p>
+        <pre class="bg-dark text-light prepre">
+            <span class="text-secondary"># Инициализация git</span>
+            <span class="homework">…\homework></span> <b>git init</b>
+            <span class="text-secondary"># Установка имени пользователя</span>
+            <span class="homework">…\homework></span> <b>git config --global user.name “Victor”</b>
+            <span class="text-secondary"># Установка email пользователя</span>
+            <span class="homework">…\homework></span> <b>git config --global user.email  “victor@victor.com”</b></pre>
+        
+        <p class="container text-primary mt-4">2. Создаем в проекте необходимые папки и файлы:</p>
+        <div class="container">
+            <img src="img/scr1.png" alt="дерево файлов">
+        </div>
+        
+        <p class="container text-primary mt-4">3. Содержание файла <b>README.md</b> <em>(этот файл можно создать позже)</em></p>
+        <div class="container card">
+            <p># Homework for the lesson "Git"</p><br>
+            <p>## The following must be done: </p>
+            <p>1. Create a new project and connect Git to it via the terminal. </p>
+            <p>2. Specify that all files with the .sass extension and folders: bin, admin, config will be ignored in the project.</p>
+            <p>3. Add all files to local storage; </p>
+            <p>4. Create a new branch and move to it;</p>
+            <p>5. In a new branch, create a blog folder with the files: index.js, index.html; </p>
+            <p>6. Upload only the main branch of your project to the remote repository.</p>
+        </div>
+        
+        <p class="container text-primary mt-4">4. Содержание файла <b>.gitignore</b></p>
+        <div class="container card">
+            <p>*.sass</p>
+            <p>bin/</p>
+            <p>admin/</p>
+            <p>config/</p>
+        </div>
+        
+        <p class="container text-primary mt-4">5. Добавляем все файлы в локальное хранилище.</p>
+        <pre class="bg-dark text-light prepre">
+            <span class="text-secondary"># добавляем изменения в рабочем каталоге в индекс</span>
+            <span class="homework">…\homework></span> <b>git add</b>
+            <span class="text-secondary"># при необходимости проверяем статус файлов:</span>
+            <span class="homework">…\homework></span> <b>git status</b>
+            <span class="text-secondary"># добавляем все файлы из индекса в локальное хранилище указывая комментарий:</span>
+            <span class="homework">…\homework></span> <b>git commit -m <span class="text-info">“first version”</span></b></pre>
+        
+        <p class="container text-primary mt-4">6. Создаем новую ветвь, переходим в нее.</p>
+        <pre class="bg-dark text-light prepre">
+            <span class="text-secondary"># создаем новую ветвь «blog»</span>
+            <span class="homework">…\homework></span> <b>git branch blog</b>
+            <span class="text-secondary"># переходим в ветвь «blog»</span>
+            <span class="homework">…\homework></span> <b>git checkout blog</b>
+            <span class="text-secondary"># при необходимости проверяем переход к новой ветке через</span>
+            <span class="homework">…\homework></span> <b>git status</b></pre>
+        
+        <p class="container text-primary mt-4">7. Создаем папку с файлами для новой ветви и синхронизируем её</p>
+        <div class="container">
+            <img src="img/scr2.png" alt="дерево файлов 2">
+        </div><br>
+        <pre class="bg-dark text-light prepre">
+            <span class="text-secondary"># добавляем изменения в рабочем каталоге в индекс</span>
+            <span class="homework">…\homework></span> <b>git add</b>
+            <span class="text-secondary"># при необходимости проверяем статус файлов:</span>
+            <span class="homework">…\homework></span> <b>git status</b>
+            <span class="text-secondary"># добавляем все файлы из индекса в локальное хранилище указывая комментарий:</span>
+            <span class="homework">…\homework></span> <b>git commit -m <span class="text-info">“folder blog added”</span></b></pre>
+        
+        <p class="container text-primary mt-4">8. Создаем новый репозиторий на портале github</p>
+        <div class="container">
+            <img src="img/github1.png" alt="github screen">
+        </div>
+        
+        <p class="container text-primary mt-4">9. Загружаем на удаленный репозиторий лишь основную ветку проекта.</p>
+        <pre class="bg-dark text-light prepre">
+            <span class="text-secondary"># переходим в основную ветку:</span>
+            <span class="homework">…\homework></span> <b>git checkout master</b>
+            <span class="text-secondary"># при необходимости проверяем переход к новой ветке через:</span>
+            <span class="homework">…\homework></span> <b>git status</b>
+            <span class="text-secondary"># подключаемся к удаленному репозиторию используя ссылку с портала github:</span>
+            <span class="homework">…\homework></span> <b>git remote add origin <span class="text-info">https://github.com/fvm80/homework.git</span></b>
+            <span class="text-secondary"># при необходимости проверяем подключение к удаленному репозиторию:</span>
+            <span class="homework">…\homework></span> <b>git remote</b>
+            <span class="text-secondary"># загружаем файлы из основной ветки на Github:</span>
+            <span class="homework">…\homework></span> <b>git push -u origin master</b>
+           
+            <span class="text-secondary"># при успешной загрузке, в консоль выводится подобная информация:</span>
+            <span class="homework">Enumerating objects: 5, done.
+            Counting objects: 100% (5/5), done.
+            Delta compression using up to 4 threads
+            Compressing objects: 100% (3/3), done.
+            Writing objects: 100% (5/5), 599 bytes | 599.00 KiB/s, done. 
+            Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+            To https://github.com/fvm80/homework.git
+            * [new branch]      master -> master   
+            branch 'master' set up to track 'origin/master'.</span> </pre>
+
+            <p class="container text-primary mt-4">10. Проверяем файлы на портале github</p>
+            <div class="container">
+                <img src="#" alt="github screen 2">
+            </div>
+
+
+    </main>
+
+    <footer class="d-flex bg-success p-5">
+        <div class="container text-light text-center align-items-center">
+            <a href="https://github.com/fvm80/homework.git" class="btn btn-danger" target="_blank" id="btn1">Проверить на GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

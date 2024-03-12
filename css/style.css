@@ -4,10 +4,13 @@ img {border-radius: 5px;
 }
 .homework {color:rgb(188, 187, 189)}
 .prepre {
-    max-width: 700px;
+    max-width: 750px;
     padding: 5px;
     margin-left: 15%;
     border-radius: 5px; 
+}
+.card {
+    max-width: 750px;  
 }
 
 .prepre span {white-space: pre-wrap}
